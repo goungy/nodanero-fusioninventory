@@ -5,8 +5,8 @@
 node default {
 
   class { 'fusioninventory':
-    cronscript_enable => true , 
-    glpiserver  => '192.168.1.2'
+    cronscript_enable => false,
+    glpiserverurl  => 'http://localhost/glpi/plugins/fusioninventory'
   }
-  
+
 }

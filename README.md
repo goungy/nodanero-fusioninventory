@@ -15,44 +15,36 @@
 
 ## Overview
 
-This puppet module installs and configures fusion inventory agent in Rhel and Debian
+This puppet module installs and configures fusion inventory agent in RHEL and Debian
 
 ## Module Description
 
-Installs fusion inventory agents and configures a cron scripts that runs daily to update inventory database.
+Installs fusion inventory agents and configures the agent service or cron scripts that runs daily to update inventory database.
 
 ## Setup
 
 ### What fusioninventory affects
 
 fusion-inventoryagent
-cron 
+cron
 
 
 ### Beginning with fusioninventory
 
-    puppet module install esterniclos-fusioninventory
+    puppet module install nodanero-fusioninventory
 
 ## Usage
 
   class { 'fusioninventory':
-         glpiserver  => '192.168.1.2'
+         glpiserverurl  => 'http://localhost/glpi/plugin/fusioninventory'
   }
 
-Do not use proxy
-
+# Use cron scripts instead of service
   class { 'fusioninventory':
     cronscript_enable => true ,
-    no_proxy => false,
-    glpiserver  => '192.168.1.2'
-  }
-
-Use bash proxy
-
-  class { 'fusioninventory':
-    cronscript_enable => true ,
-    no_proxy => true,
-    glpiserver  => '192.168.1.2'
+    service => false,
+    glpiserver  => '192.168.1.2',
+    glpiserverurl  => 'http://localhost/glpi/plugin/fusioninventory'
   }
 
 
@@ -60,9 +52,10 @@ Use bash proxy
 ## Reference
 
 * class fusioninventory : Installs and configures
-* class fusioninventory::cronscript: Sets a cronjob 
+* class fusioninventory::cronscript: Sets a cronjob
 * class fusioninventory::install: Installs
 * class fusioninventory::params: Configurations Parameters
+* class fusioninventory::service: Sets the init service
 
 
 ## Limitations
@@ -73,7 +66,7 @@ Tested in Debian and Rhel
 
 Github repository
 
-   git clone https://github.com/esterniclos/esterniclos-fusioninventory fusioninventory
+   git clone https://github.com/nodanero/esterniclos-fusioninventory fusioninventory
 
 Building module
 
