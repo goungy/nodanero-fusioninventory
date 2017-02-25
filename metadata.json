@@ -23,7 +23,10 @@
 		"6",
 		"7"
 	    ]
-	}
+	},
+  {
+	    "operatingsystem": "Windows",
+	},
     ],
     "puppet_version": [
 	"2.7",
