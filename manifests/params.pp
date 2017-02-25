@@ -1,7 +1,6 @@
-class fusioninventory::params ( String $pkgfusion = 'fusioninventory-agent',
-  String  $crondest = '/etc/cron.daily/fusioninventory',
-  String $glpiserverurl = 'http://localhost/glpi/plugins/fusioninventory',
-  )
-{
+class fusioninventory::params {
 
+  $pkgfusion = "fusioninventory-agent"
+  $crondest = "/etc/cron.daily/fusioninventory"
+  $glpiserverurl = "http://localhost/glpi/plugins/fusioninventory"
 }

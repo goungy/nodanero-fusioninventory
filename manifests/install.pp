@@ -1,7 +1,7 @@
-class fusioninventory::install
-inherits fusioninventory::params ( String $version = 'latest' )
+class fusioninventory::install (String $version = 'latest')
+inherits fusioninventory::params
 {
     package {  $fusioninventory::params::pkgfusion:
-      ensure = $version,
+      ensure => $version,
   }
 }
