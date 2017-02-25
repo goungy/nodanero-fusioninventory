@@ -1,6 +1,6 @@
 class fusioninventory::service inherits fusioninventory::params {
   service { $fusioninventory::params::pkgfusion :
-    ensure => running,
-    enable => true,
+    ensure =>  $fusioninventory::params::ensure,
+    enable =>  $fusioninventory::params::enable,
   }
 }

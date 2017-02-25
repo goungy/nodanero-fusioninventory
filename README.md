@@ -43,7 +43,6 @@ cron
   class { 'fusioninventory':
     cronscript_enable => true ,
     service => false,
-    glpiserver  => '192.168.1.2',
     glpiserverurl  => 'http://localhost/glpi/plugin/fusioninventory'
   }
 
