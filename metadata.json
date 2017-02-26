@@ -1,12 +1,12 @@
 {
     "name": "nodanero-fusioninventory",
-    "version": "0.1",
+    "version": "0.1.1",
     "author": ["esterniclos", "nodanero"],
-    "summary": "Installs and configures fusioninventory agents in Debian and Rhel. Required for glpi",
+    "summary": "Fusion Inentory agent Install and configuration in Debian and RHEL.",
     "license": "Apache-2.0",
-    "source": "https://github.com/nodanero/esterniclos-fusioninventory",
-    "project_page": "https://github.com/nodanero/esterniclos-fusioninventory",
-    "issues_url": "https://github.com/nodanero/esterniclos-fusioninventory/issues",
+    "source": "https://github.com/nodanero/nodanero-fusioninventory",
+    "project_page": "https://github.com/nodanero/nodanero-fusioninventory",
+    "issues_url": "https://github.com/nodanero/nodanero-fusioninventory/issues",
     "operatingsystem_support": [
 	{
 	    "operatingsystem": "Debian",
