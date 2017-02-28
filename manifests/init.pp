@@ -4,22 +4,22 @@
 
 class fusioninventory (
   $pkgfusion          = $fusioninventory::params::pkgfusion,
-  $server_url      = $fusioninventory::params::server_url,
+  $server_url         = $fusioninventory::params::server_url,
   $windowsmsi         = $fusioninventory::params::windowsmsi,
   $crondest           = $fusioninventory::params::crondest,
   $version            = $fusioninventory::params::version,
-  $Service_ensure     = $fusioninventory::params::ensure,
+  $service_ensure     = $fusioninventory::params::ensure,
   $service_enable     = $fusioninventory::params::enable,
   $cronscript_enable  = $fusioninventory::params::cronscript_enable
 ) inherits fusioninventory::params {
     include
     'fusioninventory::install'
 
-  if ($cronscript_enable == true){
+  if ($::cronscript_enable == true){
     include   'fusioninventory::cronscript'
   }
 
-  if ($enable == true){
+  if ($::service_enable == true){
     include   'fusioninventory::service'
   }
 
