@@ -1,8 +1,8 @@
 {
   "name": "nodanero-fusioninventory",
-  "version": "0.1.2",
+  "version": "0.1.6",
   "author": ["esterniclos", "nodanero"],
-  "summary": "FusionInventory agent Install and configuration in RHEL, Debian and Windows",
+  "summary": "Fusion Inentory agent Install and configuration in RHEL, Debian and Windows",
   "license": "Apache-2.0",
   "source": "https://github.com/nodanero/nodanero-fusioninventory",
   "project_page": "https://github.com/nodanero/nodanero-fusioninventory",
