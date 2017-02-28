@@ -4,7 +4,7 @@
 
 class fusioninventory (
   $pkgfusion          = $fusioninventory::params::pkgfusion,
-  $glpiserverurl      = $fusioninventory::params::glpiserverurl,
+  $server_url      = $fusioninventory::params::server_url,
   $windowsmsi         = $fusioninventory::params::windowsmsi,
   $crondest           = $fusioninventory::params::crondest,
   $version            = $fusioninventory::params::version,

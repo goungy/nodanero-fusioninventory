@@ -36,14 +36,14 @@ cron
 ## Usage
 
   class { 'fusioninventory':
-         glpiserverurl  => 'http://localhost/glpi/plugin/fusioninventory'
+         server_url  => 'http://localhost/glpi/plugin/fusioninventory'
   }
 
 # Use cron scripts instead of service
   class { 'fusioninventory':
     cronscript_enable => true ,
     service => false,
-    glpiserverurl  => 'http://localhost/glpi/plugin/fusioninventory'
+    server_url  => 'http://localhost/glpi/plugin/fusioninventory'
   }
 
 

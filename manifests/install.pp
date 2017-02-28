@@ -8,7 +8,7 @@ class fusioninventory::install inherits fusioninventory::params
         package { $fusioninventory::params::pkgfusion:
         ensure          => installed,
         source          => 'https://github.com/tabad/fusioninventory-agent-windows-installer/releases/download/2.3.18/fusioninventory-agent_windows-x86_2.3.18.exe',
-        install_options => ['/acceptlicense=yes /add-firewall-exception=yes /execmode=service /installtasks=Full /server=$fusioninventory::params::glpiserverurl'],
+        install_options => ['/acceptlicense=yes /add-firewall-exception=yes /execmode=service /installtasks=Full /server=$fusioninventory::params::server_url'],
         }
       }
       'RedHat', 'CentOS':  {

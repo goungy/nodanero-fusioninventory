@@ -5,7 +5,7 @@
 node default {
 
   class { 'fusioninventory':
-    no_proxy   => true,
-    glpiserverurl     => 'http:///'
+    no_proxy    => true,
+    server_url  => 'http:///'
   }
 }
