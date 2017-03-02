@@ -1,8 +1,8 @@
 
 #include fusion inventory
 
-class fusioninventory::cronscript inherits fusioninventory::params{
-  file { $fusioninventory::params::crondest:
+class fusioninventory::cronscript inherits fusioninventory {
+  file { $::crondest:
     ensure  => 'present',
     owner   => 'root',
     group   => 'root',

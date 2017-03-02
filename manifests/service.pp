@@ -1,7 +1,7 @@
 
 #include fusion inventory
 
-class fusioninventory::service inherits fusioninventory::params {
+class fusioninventory::service inherits fusioninventory {
   file { '/etc/fusioninventory/agent.cfg':
     ensure  => 'present',
     owner   => 'root',
@@ -10,8 +10,8 @@ class fusioninventory::service inherits fusioninventory::params {
     content => template('fusioninventory/agent.cfg.erb'),
   }
 
-  service { $fusioninventory::params::pkgfusion :
-    ensure =>  $fusioninventory::params::ensure,
-    enable =>  $fusioninventory::params::enable,
+  service { $::pkgfusion :
+    ensure =>  $::service_ensure,
+    enable =>  $::service_enable,
   }
 }
