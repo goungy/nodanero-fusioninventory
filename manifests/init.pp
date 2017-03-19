@@ -15,11 +15,11 @@ class fusioninventory (
     include
     'fusioninventory::install'
 
-  if ($::cronscript_enable == true){
+  if ($fusioninventory::cronscript_enable == true){
     include   'fusioninventory::cronscript'
   }
 
-  if ($::service_enable == true){
+  if ($fusioninventory::service_enable == true){
     include   'fusioninventory::service'
   }
 
